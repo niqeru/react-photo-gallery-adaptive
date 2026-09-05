@@ -1,5 +1,15 @@
 # React Adaptive Photo Gallery
 
+## Preview
+
+<p align="center">
+  <img src="./assets/image1.png" alt="Gallery preview 1" width="420" />
+  <img src="./assets/image2.png" alt="Gallery preview 2" width="420" />
+  <br />
+  <img src="./assets/image3.png" alt="Gallery preview 3" width="420" />
+  <img src="./assets/image4.png" alt="Gallery preview 4" width="420" />
+</p>
+
 An adaptive React component for image galleries with dynamic aspect-ratio layout calculations, a full-screen lightbox, and a responsive view-all modal.
 
 ## Features
