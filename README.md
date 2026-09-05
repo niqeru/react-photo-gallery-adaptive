@@ -51,21 +51,19 @@ export default function App() {
 }
 ```
 
-## Using in another React app
+## Usage
 
-After publishing to npm, other developers install it the same way:
+Install the package:
 
 ```bash
 npm install react-photo-gallery-adaptive
 ```
 
-Then they import it in their app:
+Then import it in your React app:
 
 ```jsx
 import PhotoGallery from "react-photo-gallery-adaptive";
 ```
-
-The repo itself is used for development and demo testing, while npm is used for real app integration.
 
 ## Local demo
 
@@ -74,4 +72,4 @@ npm install
 npm run dev
 ```
 
-Then open the local URL shown by Vite in the browser.
+Open the local URL shown by Vite in the browser.
