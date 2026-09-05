@@ -3,8 +3,9 @@
 ## Preview
 
 <p align="center">
-  <img src="./assets/image1.png" alt="Gallery preview 1" width="420" />
-  <img src="./assets/image2.png" alt="Gallery preview 2" width="420" />
+  <img src="./assets/image1.png" alt="Gallery preview 1" width="800" />
+  <br />
+  <img src="./assets/image2.png" alt="Gallery preview 2" width="800" />
   <br />
   <img src="./assets/image3.png" alt="Gallery preview 3" width="420" />
   <img src="./assets/image4.png" alt="Gallery preview 4" width="420" />
