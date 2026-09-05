@@ -27,9 +27,12 @@ npm install react-photo-gallery-adaptive
 
 ## Quick Start
 
+```bash
+npm install react-photo-gallery-adaptive
+```
+
 ```jsx
 import React from "react";
-import ReactDOM from "react-dom/client";
 import PhotoGallery from "react-photo-gallery-adaptive";
 
 const photos = [
@@ -39,22 +42,36 @@ const photos = [
   "https://picsum.photos/1200/800",
 ];
 
-function App() {
+export default function App() {
   return (
-    <div style={{ maxWidth: 1000, margin: "0 auto" }}>
+    <div style={{ maxWidth: 1000, margin: "0 auto", padding: 24 }}>
       <PhotoGallery photos={photos} title="Vacation Photos" />
     </div>
   );
 }
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
 ```
 
-Local demo (build then open the example):
+## Using in another React app
+
+After publishing to npm, other developers install it the same way:
+
+```bash
+npm install react-photo-gallery-adaptive
+```
+
+Then they import it in their app:
+
+```jsx
+import PhotoGallery from "react-photo-gallery-adaptive";
+```
+
+The repo itself is used for development and demo testing, while npm is used for real app integration.
+
+## Local demo
 
 ```bash
 npm install
-npm run build
-open example/index.html
+npm run dev
 ```
+
+Then open the local URL shown by Vite in the browser.
