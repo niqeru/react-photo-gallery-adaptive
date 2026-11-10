@@ -3,12 +3,12 @@
 ## Preview
 
 <p align="center">
-  <img src="./assets/image1.png" alt="Gallery preview 1" width="800" />
+  <img src="https://raw.githubusercontent.com/niqeru/react-photo-gallery-adaptive/main/assets/image1.png" alt="Gallery preview 1" width="800" />
   <br />
-  <img src="./assets/image2.png" alt="Gallery preview 2" width="800" />
+  <img src="https://raw.githubusercontent.com/niqeru/react-photo-gallery-adaptive/main/assets/image2.png" alt="Gallery preview 2" width="800" />
   <br />
-  <img src="./assets/image3.png" alt="Gallery preview 3" width="420" />
-  <img src="./assets/image4.png" alt="Gallery preview 4" width="420" />
+  <img src="https://raw.githubusercontent.com/niqeru/react-photo-gallery-adaptive/main/assets/image3.png" alt="Gallery preview 3" width="420" />
+  <img src="https://raw.githubusercontent.com/niqeru/react-photo-gallery-adaptive/main/assets/image4.png" alt="Gallery preview 4" width="420" />
 </p>
 
 An adaptive React component for image galleries with dynamic aspect-ratio layout calculations, a full-screen lightbox, and a responsive view-all modal.
@@ -25,14 +25,11 @@ An adaptive React component for image galleries with dynamic aspect-ratio layout
 npm install react-photo-gallery-adaptive
 ```
 
+Requires React 16.8+ (hooks). Styles are bundled into the component, no separate CSS import needed.
+
 ## Quick Start
 
-```bash
-npm install react-photo-gallery-adaptive
-```
-
 ```jsx
-import React from "react";
 import PhotoGallery from "react-photo-gallery-adaptive";
 
 const photos = [
@@ -51,19 +48,14 @@ export default function App() {
 }
 ```
 
-## Usage
+Works with Vite, webpack/CRA, Next.js (App Router and Pages Router) and plain Node (ESM and CommonJS). TypeScript types are included.
 
-Install the package:
+## Props
 
-```bash
-npm install react-photo-gallery-adaptive
-```
-
-Then import it in your React app:
-
-```jsx
-import PhotoGallery from "react-photo-gallery-adaptive";
-```
+| Prop     | Type       | Default     | Description                                                                   |
+| -------- | ---------- | ----------- | ----------------------------------------------------------------------------- |
+| `photos` | `string[]` | (required)  | Image URLs. Up to 11 are shown in the grid; the rest open in the "More" modal. |
+| `title`  | `string`   | `"Gallery"` | Used in image alt text and the header of the "all photos" modal.             |
 
 ## Local demo
 
@@ -72,4 +64,4 @@ npm install
 npm run dev
 ```
 
-Open the local URL shown by Vite in the browser.
+Then open http://localhost:4173/example/ in the browser.

@@ -1,3 +1,3 @@
-import PhotoGallery from "./PhotoGallery";
+import PhotoGallery from "./PhotoGallery.jsx";
 
 export default PhotoGallery;

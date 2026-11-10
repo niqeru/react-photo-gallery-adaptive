@@ -1,6 +1,10 @@
 import React from "react";
 import "./PhotoGallery.css";
 
+// useLayoutEffect warns during SSR (Next.js etc.); fall back to useEffect on the server.
+const useIsomorphicLayoutEffect =
+  typeof window !== "undefined" ? React.useLayoutEffect : React.useEffect;
+
 function Lightbox({ photos, startIndex, onClose }) {
   const [current, setCurrent] = React.useState(startIndex);
 
@@ -72,7 +76,16 @@ export default function PhotoGallery({ photos, title = "Gallery" }) {
   const [lightboxIndex, setLightboxIndex] = React.useState(null);
   const [showModal, setShowModal] = React.useState(false);
   const [fallbackRatios, setFallbackRatios] = React.useState({});
+  const wrapRef = React.useRef(null);
+  const [GALLERY_H, setGalleryH] = React.useState(400);
 
+  useIsomorphicLayoutEffect(() => {
+    if (!wrapRef.current) return;
+    const h = wrapRef.current.getBoundingClientRect().height;
+    if (h > 0) setGalleryH(h);
+  }, [photos]);
+
+  // All hooks must run before this early return (Rules of Hooks).
   if (!photos || photos.length === 0) return null;
 
   const urlRatio = (url) => {
@@ -110,15 +123,6 @@ export default function PhotoGallery({ photos, title = "Gallery" }) {
     if (i + 1 < shown.length) c.push(i + 1);
     cols.push(c);
   }
-
-  const wrapRef = React.useRef(null);
-  const [GALLERY_H, setGalleryH] = React.useState(400);
-
-  React.useLayoutEffect(() => {
-    if (!wrapRef.current) return;
-    const h = wrapRef.current.getBoundingClientRect().height;
-    if (h > 0) setGalleryH(h);
-  }, [photos]);
 
   const colPx = (idxs) => {
     if (idxs.length === 1) return Math.round(getRatio(idxs[0]) * GALLERY_H);
