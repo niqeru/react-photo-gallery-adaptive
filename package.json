@@ -1,6 +1,6 @@
 {
   "name": "react-photo-gallery-adaptive",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Adaptive React photo gallery with automatic aspect-ratio calculation, full-screen lightbox, and responsive grid modal.",
   "scripts": {
     "dev": "vite --config vite.demo.config.mjs --host 0.0.0.0 --port 4173",
