@@ -1,5 +1,14 @@
 # React Adaptive Photo Gallery
 
+[![npm version](https://img.shields.io/npm/v/react-photo-gallery-adaptive)](https://www.npmjs.com/package/react-photo-gallery-adaptive)
+[![npm downloads](https://img.shields.io/npm/dm/react-photo-gallery-adaptive)](https://www.npmjs.com/package/react-photo-gallery-adaptive)
+[![minzipped size](https://img.shields.io/bundlephobia/minzip/react-photo-gallery-adaptive)](https://bundlephobia.com/package/react-photo-gallery-adaptive)
+![zero dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)
+![types included](https://img.shields.io/npm/types/react-photo-gallery-adaptive)
+[![license](https://img.shields.io/npm/l/react-photo-gallery-adaptive)](https://github.com/niqeru/react-photo-gallery-adaptive/blob/main/LICENSE)
+
+**[Live demo →](https://niqeru.github.io/react-photo-gallery-adaptive/)**
+
 ## Preview
 
 <p align="center">
@@ -64,4 +73,4 @@ npm install
 npm run dev
 ```
 
-Then open http://localhost:4173/example/ in the browser.
+Then open http://localhost:4173/ in the browser. The same demo is deployed to [GitHub Pages](https://niqeru.github.io/react-photo-gallery-adaptive/) on every push to `main`.

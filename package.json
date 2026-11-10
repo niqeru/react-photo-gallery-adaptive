@@ -3,9 +3,10 @@
   "version": "1.0.1",
   "description": "Adaptive React photo gallery with automatic aspect-ratio calculation, full-screen lightbox, and responsive grid modal.",
   "scripts": {
-    "dev": "vite --host 0.0.0.0 --port 4173",
+    "dev": "vite --config vite.demo.config.mjs --host 0.0.0.0 --port 4173",
     "build": "vite build",
-    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "build:demo": "vite build --config vite.demo.config.mjs",
+    "preview": "vite preview --config vite.demo.config.mjs --host 0.0.0.0 --port 4173",
     "prepublishOnly": "npm run build"
   },
   "main": "dist/index.cjs",
@@ -26,13 +27,21 @@
   ],
   "keywords": [
     "react",
+    "react-component",
     "gallery",
     "photo-gallery",
+    "image-gallery",
+    "react-image-gallery",
     "lightbox",
+    "justified-gallery",
+    "justified-layout",
+    "masonry",
+    "image-grid",
+    "aspect-ratio",
     "responsive",
     "adaptive",
-    "aspect-ratio",
-    "image-grid"
+    "nextjs",
+    "typescript"
   ],
   "author": "niqeru",
   "license": "MIT",
@@ -43,7 +52,7 @@
   "bugs": {
     "url": "https://github.com/niqeru/react-photo-gallery-adaptive/issues"
   },
-  "homepage": "https://github.com/niqeru/react-photo-gallery-adaptive#readme",
+  "homepage": "https://niqeru.github.io/react-photo-gallery-adaptive/",
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
     "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
